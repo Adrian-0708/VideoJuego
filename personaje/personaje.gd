@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 signal player_hit()
 
-@export var gravity = 100
+@export var gravity = 90
 @export var jump_speed = 100
 @export var speed = 100
 @onready var sprite_2d = $Sprite2D

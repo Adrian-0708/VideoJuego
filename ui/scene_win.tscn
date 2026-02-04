@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bn7dsc6kymhjf"]
+
+[ext_resource type="Script" uid="uid://bwaguhoyhwd2m" path="res://ui/scene_win.gd" id="1_2tugg"]
+
+[node name="SceneWin" type="CanvasLayer" unique_id=68749747]
+script = ExtResource("1_2tugg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=445853476]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.5
+offset_top = -29.0
+offset_right = 68.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=962329463]
+layout_mode = 2
+text = "HAS GANADO!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1154801483]
+layout_mode = 2
+text = "VOLVER A JUGAR"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=671323419]
+layout_mode = 2
+text = "MENU"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=367499890]
+layout_mode = 2
+text = "SALIR"
+
+[connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_pla_down"]
+[connection signal="button_down" from="VBoxContainer/Button2" to="." method="_on_button_ini_down"]
+[connection signal="button_down" from="VBoxContainer/Button3" to="." method="_on_button_sal_down"]

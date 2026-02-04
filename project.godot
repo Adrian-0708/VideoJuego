@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="HOP"
-run/main_scene="res://niveles/level_1.tscn"
+run/main_scene="uid://c2vbo8p73vh3c"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

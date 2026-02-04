@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://crmfkeiomfadm"]
+[gd_scene format=3 uid="uid://crmfkeiomfadm"]
 
-[ext_resource type="Script" path="res://ui/SceneFinish.gd" id="1_vvg3l"]
+[ext_resource type="Script" uid="uid://bj0axd4e2rux1" path="res://ui/SceneFinish.gd" id="1_vvg3l"]
 
-[node name="SceneFinish" type="CanvasLayer"]
+[node name="SceneFinish" type="CanvasLayer" unique_id=41918558]
 script = ExtResource("1_vvg3l")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1780961339]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -18,13 +18,23 @@ offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=11937856]
 layout_mode = 2
 text = "GAME OVER"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=683344377]
 layout_mode = 2
 text = "VOLVER A JUGAR"
 
-[connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_button_down"]
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1830506159]
+layout_mode = 2
+text = "MENU"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1742074559]
+layout_mode = 2
+text = "SALIR"
+
+[connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_jugar_down"]
+[connection signal="button_down" from="VBoxContainer/Button2" to="." method="_on_button_inicio_down"]
+[connection signal="button_down" from="VBoxContainer/Button3" to="." method="_on_button_salir_down"]

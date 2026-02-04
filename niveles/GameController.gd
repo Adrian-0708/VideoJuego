@@ -1,6 +1,7 @@
 extends Node2D
 
 const SCENE_FINISH_FILE = "res://ui/scene_finish.tscn"
+const SCENE_WIN_FILE = "res://ui/scene_win.tscn"
 
 signal player_health_updated(new_player_health)
 signal time_updated(seconds_left)
@@ -12,14 +13,12 @@ func game_over():
 	get_tree().change_scene_to_file(SCENE_FINISH_FILE)
 	
 func game_victory():
-	var scene_finish_instance = preload(SCENE_FINISH_FILE).instantiate()
-	scene_finish_instance.set_title("HAS GANADO")
-	add_child(scene_finish_instance)
+	get_tree().change_scene_to_file(SCENE_WIN_FILE)
 
 
 func _on_personaje_player_hit():
 	print("Game controller se ha enterado de que el jugador sufrio daño")
-	if player_health > 0:
+	if player_health > 1:
 		player_health = player_health - 1
 		player_health_updated.emit(player_health)
 	else:

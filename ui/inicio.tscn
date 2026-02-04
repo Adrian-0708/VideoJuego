@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c2vbo8p73vh3c"]
+
+[ext_resource type="Texture2D" uid="uid://xalh0jcceivx" path="res://assets/kenney/character/character_round_purple.png" id="1_l8rxt"]
+[ext_resource type="Script" uid="uid://gofg2n0w2bpj" path="res://ui/inicio.gd" id="1_uaocj"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1854597473]
+script = ExtResource("1_uaocj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=373332385]
+custom_minimum_size = Vector2(200, 0)
+offset_left = 480.5
+offset_top = 260.0
+offset_right = 680.5
+offset_bottom = 388.0
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=286042786]
+layout_mode = 2
+text = "HOP"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=769252749]
+layout_mode = 2
+text = "JUGAR"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=2028069081]
+layout_mode = 2
+text = "CONTROLES"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=2137729896]
+layout_mode = 2
+text = "SALIR"
+
+[node name="CharacterRoundPurple" type="Sprite2D" parent="VBoxContainer" unique_id=1065372062]
+position = Vector2(98.5, -72)
+scale = Vector2(1.7160913, 1.7980926)
+texture = ExtResource("1_l8rxt")
+
+[connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_play_down"]
+[connection signal="button_down" from="VBoxContainer/Button2" to="." method="_on_button_controles_down"]
+[connection signal="button_down" from="VBoxContainer/Button3" to="." method="_on_button_exit_down"]

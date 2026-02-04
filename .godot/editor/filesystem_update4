@@ -1,0 +1,14 @@
+res://niveles/GameController.gd
+res://niveles/level_1.tscn
+res://enemigos/barril.gd
+res://ui/SceneWin.gd
+res://ui/scene_win.tscn
+res://personaje/personaje.gd
+res://ui/Inicio.tscn
+res://ui/SceneFinish.gd
+res://ui/scene_inicio.tscn
+res://ui/SceneInicio.gd
+res://ui/scene_finish.tscn
+res://ui/scene_win.gd
+res://ui/inicio.tscn
+res://ui/inicio.gd

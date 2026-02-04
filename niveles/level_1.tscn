@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://dva1s2482hdu"]
+[gd_scene format=3 uid="uid://dva1s2482hdu"]
 
-[ext_resource type="Script" path="res://personaje/CameraFollow.gd" id="1_1h50n"]
+[ext_resource type="Script" uid="uid://ce71cgngt5caa" path="res://personaje/CameraFollow.gd" id="1_1h50n"]
 [ext_resource type="Texture2D" uid="uid://dvsc2vm55lnev" path="res://assets/kenney/decoration/background_tree.png" id="1_gfguo"]
 [ext_resource type="PackedScene" uid="uid://b6uqfrnmphs6d" path="res://suelos/puente.tscn" id="1_orcob"]
 [ext_resource type="Texture2D" uid="uid://dxylxb1ys1v2j" path="res://assets/kenney/decoration/background_treeLarge.png" id="2_d4oh4"]
@@ -13,41 +13,41 @@
 [ext_resource type="PackedScene" uid="uid://i6fbee67uc6n" path="res://suelos/top.tscn" id="5_oijb5"]
 [ext_resource type="PackedScene" uid="uid://dgaheqby8ruce" path="res://enemigos/boss.tscn" id="10_pnl6e"]
 [ext_resource type="PackedScene" uid="uid://dj5jiwqy6m03p" path="res://ui/canvas_layer_ui.tscn" id="12_usisn"]
-[ext_resource type="Script" path="res://niveles/GameController.gd" id="13_1i60b"]
+[ext_resource type="Script" uid="uid://b3uj1vifbtgy0" path="res://niveles/GameController.gd" id="13_1i60b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbmyf"]
-size = Vector2(105, 59)
+size = Vector2(26, 127)
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" unique_id=514021591]
 
-[node name="GameController" type="Node2D" parent="."]
+[node name="GameController" type="Node2D" parent="." unique_id=1866912742]
 script = ExtResource("13_1i60b")
 
-[node name="Timer" type="Timer" parent="GameController"]
+[node name="Timer" type="Timer" parent="GameController" unique_id=622904605]
 autostart = true
 
-[node name="Barril" parent="GameController" instance=ExtResource("3_114ma")]
+[node name="Barril" parent="GameController" unique_id=755389581 instance=ExtResource("3_114ma")]
 position = Vector2(810, 415)
 
-[node name="Barril2" parent="GameController" instance=ExtResource("3_114ma")]
+[node name="Barril2" parent="GameController" unique_id=122801500 instance=ExtResource("3_114ma")]
 position = Vector2(637, 523)
 
-[node name="Barril3" parent="GameController" instance=ExtResource("3_114ma")]
+[node name="Barril3" parent="GameController" unique_id=354664233 instance=ExtResource("3_114ma")]
 position = Vector2(283, 290)
 
-[node name="Barril4" parent="GameController" instance=ExtResource("3_114ma")]
+[node name="Barril4" parent="GameController" unique_id=2070734076 instance=ExtResource("3_114ma")]
 position = Vector2(101, 353)
 
-[node name="Barril5" parent="GameController" instance=ExtResource("3_114ma")]
+[node name="Barril5" parent="GameController" unique_id=1521138393 instance=ExtResource("3_114ma")]
 position = Vector2(737, 163)
 
-[node name="Barril6" parent="GameController" instance=ExtResource("3_114ma")]
+[node name="Barril6" parent="GameController" unique_id=1931840055 instance=ExtResource("3_114ma")]
 position = Vector2(288, 48)
 
-[node name="Barril7" parent="GameController" instance=ExtResource("3_114ma")]
+[node name="Barril7" parent="GameController" unique_id=1887416464 instance=ExtResource("3_114ma")]
 position = Vector2(721, 21)
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=582050469 node_paths=PackedStringArray("object_to_follow")]
 position = Vector2(806, -207)
 rotation = 0.0698132
 limit_left = 0
@@ -59,86 +59,92 @@ position_smoothing_speed = 10.0
 script = ExtResource("1_1h50n")
 object_to_follow = NodePath("../Personaje")
 
-[node name="Flag" type="Sprite2D" parent="."]
+[node name="Flag" type="Sprite2D" parent="." unique_id=55884723]
 position = Vector2(369, -100)
 texture = ExtResource("2_edwlm")
 
-[node name="Area2D" type="Area2D" parent="Flag"]
+[node name="Area2D" type="Area2D" parent="Flag" unique_id=1485158883]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Flag/Area2D"]
-position = Vector2(-9.5, -14.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flag/Area2D" unique_id=1604176086]
+position = Vector2(-16, -48.5)
 shape = SubResource("RectangleShape2D_hbmyf")
 
-[node name="decoracion" type="Node2D" parent="."]
+[node name="decoracion" type="Node2D" parent="." unique_id=33402591]
 
-[node name="BackgroundTree" type="Sprite2D" parent="decoracion"]
+[node name="BackgroundTree" type="Sprite2D" parent="decoracion" unique_id=8537732]
 position = Vector2(147, 542)
 texture = ExtResource("1_gfguo")
 
-[node name="BackgroundTreeLarge" type="Sprite2D" parent="decoracion"]
+[node name="BackgroundTreeLarge" type="Sprite2D" parent="decoracion" unique_id=1073427249]
 position = Vector2(106, 546)
 texture = ExtResource("2_d4oh4")
 
-[node name="BackgroundTree2" type="Sprite2D" parent="decoracion"]
+[node name="BackgroundTree2" type="Sprite2D" parent="decoracion" unique_id=819024185]
 position = Vector2(1103, 477)
 texture = ExtResource("1_gfguo")
 
-[node name="BackgroundCloudA" type="Sprite2D" parent="decoracion"]
+[node name="BackgroundCloudA" type="Sprite2D" parent="decoracion" unique_id=2121477773]
 position = Vector2(902, -199)
 texture = ExtResource("3_4v7ll")
 
-[node name="BackgroundCloudB" type="Sprite2D" parent="decoracion"]
+[node name="BackgroundCloudB" type="Sprite2D" parent="decoracion" unique_id=735857436]
 position = Vector2(567, -337)
 texture = ExtResource("4_2uubs")
 
-[node name="BackgroundCloudA2" type="Sprite2D" parent="decoracion"]
+[node name="BackgroundCloudA2" type="Sprite2D" parent="decoracion" unique_id=402661522]
 position = Vector2(310, -301)
 scale = Vector2(-1, 1)
 texture = ExtResource("3_4v7ll")
 
-[node name="Suelos" type="Node2D" parent="."]
+[node name="Suelos" type="Node2D" parent="." unique_id=1456784617]
 
-[node name="Platform" parent="Suelos" instance=ExtResource("4_h2314")]
+[node name="Platform" parent="Suelos" unique_id=1087109974 instance=ExtResource("4_h2314")]
 position = Vector2(487, 447)
 rotation = 0.0698132
 
-[node name="Platform2" parent="Suelos" instance=ExtResource("4_h2314")]
+[node name="Platform2" parent="Suelos" unique_id=55534627 instance=ExtResource("4_h2314")]
 position = Vector2(663, 323)
 rotation = -0.0698132
 
-[node name="Platform3" parent="Suelos" instance=ExtResource("4_h2314")]
+[node name="Platform3" parent="Suelos" unique_id=1124957126 instance=ExtResource("4_h2314")]
 position = Vector2(485, 202)
 rotation = 0.0698132
 
-[node name="Platform4" parent="Suelos" instance=ExtResource("4_h2314")]
+[node name="Platform4" parent="Suelos" unique_id=320988850 instance=ExtResource("4_h2314")]
 position = Vector2(667, 83)
 rotation = -0.0698132
 
-[node name="Top" parent="Suelos" instance=ExtResource("5_oijb5")]
+[node name="Top" parent="Suelos" unique_id=1626932565 instance=ExtResource("5_oijb5")]
 position = Vector2(-30, -65)
 
-[node name="Top2" parent="Suelos" instance=ExtResource("5_oijb5")]
+[node name="Top2" parent="Suelos" unique_id=1662493730 instance=ExtResource("5_oijb5")]
 position = Vector2(387, -58)
 rotation = 0.0349066
 
-[node name="Top3" parent="Suelos" instance=ExtResource("5_oijb5")]
+[node name="Top3" parent="Suelos" unique_id=178543861 instance=ExtResource("5_oijb5")]
 position = Vector2(802, -35)
 rotation = 0.0698132
 
-[node name="Puente" parent="Suelos" instance=ExtResource("1_orcob")]
+[node name="Puente" parent="Suelos" unique_id=371356193 instance=ExtResource("1_orcob")]
 position = Vector2(592, 582)
 rotation = -0.0698132
 
-[node name="Personaje" parent="." instance=ExtResource("2_f3i8q")]
+[node name="Personaje" parent="." unique_id=715557312 instance=ExtResource("2_f3i8q")]
 position = Vector2(210, 531)
 collision_layer = 2
+gravity = 600
+jump_speed = 305
 
-[node name="Boss" parent="." instance=ExtResource("10_pnl6e")]
+[node name="Boss" parent="." unique_id=111900597 instance=ExtResource("10_pnl6e")]
 position = Vector2(172, -109)
 
-[node name="CanvasLayerUI" parent="." instance=ExtResource("12_usisn")]
+[node name="CanvasLayerUI" parent="." unique_id=1600235068 instance=ExtResource("12_usisn")]
+
+[node name="BackgroundCloudA" type="Sprite2D" parent="." unique_id=193301694]
+position = Vector2(902, -199)
+texture = ExtResource("3_4v7ll")
 
 [connection signal="player_health_updated" from="GameController" to="CanvasLayerUI" method="_on_game_controller_player_health_updated"]
 [connection signal="time_updated" from="GameController" to="CanvasLayerUI" method="_on_game_controller_time_updated"]
