@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dl5tsp8ccfr8"
+path="res://.godot/imported/Voicy_Roblox Death.mp3-2f93e718e36056de37f94d1ffbf63302.mp3str"
+
+[deps]
+
+source_file="res://assets/kenney/Music/Voicy_Roblox Death.mp3"
+dest_files=["res://.godot/imported/Voicy_Roblox Death.mp3-2f93e718e36056de37f94d1ffbf63302.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -3,6 +3,9 @@ extends RigidBody2D
 
 @export var demasiado_abajo = 1000
 
+@onready var sonido_choque = $SonidoChoque 
+@onready var colision = $CollisionShape2D
+
 func _process(delta):
 	if position.y > demasiado_abajo:
 		queue_free()
@@ -11,8 +14,16 @@ func _on_body_entered(body):
 	if body is Personaje:
 		print("Jugador herido")
 		
-		# 1. Aplicamos el daño primero
 		if body.has_method("damage_received"):
 			body.damage_received()
-		# 2. Eliminamos el barril de la escena
+		
+		sonido_choque.play()
+		
+		hide()
+		
+		colision.set_deferred("disabled", true) 
+		set_deferred("freeze", true)
+		
+		await sonido_choque.finished
+		
 		queue_free()

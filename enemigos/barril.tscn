@@ -1,22 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnqx0yfe6tk6q"]
+[gd_scene format=3 uid="uid://cnqx0yfe6tk6q"]
 
-[ext_resource type="Script" path="res://enemigos/barril.gd" id="1_6a10g"]
+[ext_resource type="Script" uid="uid://da57nhbopoted" path="res://enemigos/barril.gd" id="1_6a10g"]
 [ext_resource type="Texture2D" uid="uid://ochcjg3t4prm" path="res://assets/kenney/enemies/barrel_yellow.png" id="1_i35f5"]
+[ext_resource type="AudioStream" uid="uid://dl5tsp8ccfr8" path="res://assets/kenney/Music/Voicy_Roblox Death.mp3" id="3_eajbm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_npyhx"]
 radius = 19.0263
 
-[node name="Barril" type="RigidBody2D"]
+[node name="Barril" type="RigidBody2D" unique_id=345030338]
 collision_layer = 4
 collision_mask = 7
-max_contacts_reported = 4
 contact_monitor = true
+max_contacts_reported = 4
 script = ExtResource("1_6a10g")
 
-[node name="BarrelYellow" type="Sprite2D" parent="."]
+[node name="BarrelYellow" type="Sprite2D" parent="." unique_id=1389425452]
 texture = ExtResource("1_i35f5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=149610311]
 shape = SubResource("CircleShape2D_npyhx")
+
+[node name="SonidoChoque" type="AudioStreamPlayer2D" parent="." unique_id=1239594339]
+stream = ExtResource("3_eajbm")
+volume_db = -10.692
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

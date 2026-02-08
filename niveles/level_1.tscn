@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://dgaheqby8ruce" path="res://enemigos/boss.tscn" id="10_pnl6e"]
 [ext_resource type="PackedScene" uid="uid://dj5jiwqy6m03p" path="res://ui/canvas_layer_ui.tscn" id="12_usisn"]
 [ext_resource type="Script" uid="uid://b3uj1vifbtgy0" path="res://niveles/GameController.gd" id="13_1i60b"]
+[ext_resource type="AudioStream" uid="uid://6rwqhhendobc" path="res://assets/kenney/Music/Donkey Kong Country OST (Super Nintendo) - Track 02_23 - Simian Segue [b1xkXrzVQdU].mp3" id="15_ahv3f"]
+[ext_resource type="Script" uid="uid://dhrrh633s6hk1" path="res://niveles/audio_stream_player_2d.gd" id="16_chx5c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbmyf"]
 size = Vector2(26, 127)
@@ -145,6 +147,11 @@ position = Vector2(172, -109)
 [node name="BackgroundCloudA" type="Sprite2D" parent="." unique_id=193301694]
 position = Vector2(902, -199)
 texture = ExtResource("3_4v7ll")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=349173758]
+stream = ExtResource("15_ahv3f")
+volume_db = -15.551
+script = ExtResource("16_chx5c")
 
 [connection signal="player_health_updated" from="GameController" to="CanvasLayerUI" method="_on_game_controller_player_health_updated"]
 [connection signal="time_updated" from="GameController" to="CanvasLayerUI" method="_on_game_controller_time_updated"]
